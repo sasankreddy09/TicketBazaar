@@ -7,7 +7,7 @@ function Social(){
                 href="https://www.facebook.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full  text-black hover:bg-violet-700 transition"
+                className="p-3 rounded-full  text-black hover:bg-purple-700 transition"
             >
                 <FaFacebookF size={18} />
             </a>
@@ -15,7 +15,7 @@ function Social(){
                 href="https://www.instagram.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full text-black hover:bg-violet-700 transition"
+                className="p-3 rounded-full text-black hover:bg-purple-700 transition"
             >
                 <FaInstagram size={18} />
             </a>
@@ -23,7 +23,7 @@ function Social(){
                 href="https://www.linkedin.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 rounded-full text-black hover:bg-violet-800 transition"
+                className="p-3 rounded-full text-black hover:bg-purple-800 transition"
             >
                 <FaLinkedinIn size={18} />
             </a>
