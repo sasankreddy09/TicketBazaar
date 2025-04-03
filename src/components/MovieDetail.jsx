@@ -12,25 +12,26 @@ function MovieDetail() {
     }, []);
 
     return (
-        <div className="min-h-screen p-10">
-            <div className="ml-16 mt-8 flex items-start space-x-8 p-4 h-[90%]">
-                <div className="w-[16%]">
+        <div className="min-h-screen p-6 sm:p-10">
+            <div className="flex flex-col sm:flex-row sm:items-start space-x-0 sm:space-x-8 p-4 sm:h-[90%]">
+
+                <div className="w-full sm:w-[16%] flex flex-col items-center">
                     {loading ? (
                         <div className="w-full h-80 bg-gray-300 animate-pulse rounded-lg"></div>
                     ) : (
                         <>
-                            <img 
-                                src={movie.imageUrl} 
-                                alt={movie.title} 
-                                className="w-full h-80 object-cover rounded-t-lg shadow-lg"
+                            <img
+                                src={movie.imageUrl}
+                                alt={movie.title}
+                                className="w-full max-w-xs sm:max-w-none sm:w-full h-80 object-cover rounded-t-lg shadow-lg"
                             />
-                            <div className="bg-black text-white rounded-b-lg p-2 h-8 text-center">
+                            <div className="bg-black text-white rounded-b-lg p-2 h-8 text-center w-full">
                                 In Theaters
                             </div>
                         </>
                     )}
                 </div>
-                <div className="w-2/3 pt-10 pr-4">
+                <div className="w-full sm:w-2/3 pt-6 sm:pt-10 pr-4">
                     {loading ? (
                         <>
                             <div className="h-10 w-3/4 bg-gray-300 animate-pulse rounded"></div>
@@ -42,17 +43,17 @@ function MovieDetail() {
                         </>
                     ) : (
                         <>
-                            <h1 className="text-4xl font-bold text-gray-800">{movie.title}</h1>
+                            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">{movie.title}</h1>
                             <div className="mt-4 text-gray-500">
-                                <p className="mb-4"><strong>Genre:</strong> {movie.genre}</p>
-                                <p className="mb-4"><strong>Release Date:</strong> {movie.releaseDate}</p>
+                                <p className="mb-2"><strong>Genre:</strong> {movie.genre}</p>
+                                <p className="mb-2"><strong>Release Date:</strong> {movie.releaseDate}</p>
                                 <div className="flex items-center space-x-2">
                                     <Clock size={16} className="text-violet-600" />
                                     <span className="text-gray-700 font-medium">{movie.duration}</span>
                                 </div>
                             </div>
 
-                            <button 
+                            <button
                                 className="mt-6 px-6 py-2 bg-violet-600 text-white font-semibold rounded-lg shadow-lg hover:bg-violet-700 transition"
                             >
                                 Book Your Tickets
@@ -61,7 +62,8 @@ function MovieDetail() {
                     )}
                 </div>
             </div>
-            <div className="ml-20 m-4 mr-[20%] p-4 rounded-lg ">
+
+            <div className="w-[85%] mx-auto mt-8 p-4 rounded-lg">
                 <span className="font-bold text-xl">About The Movie:</span>
                 <div className="pt-4">
                     {loading ? (
